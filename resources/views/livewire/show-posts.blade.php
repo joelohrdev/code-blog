@@ -12,5 +12,7 @@
     @empty
         <p>There are no posts to show.</p>
     @endforelse
-    {{ $posts->links() }}
+    <div class="mt-5">
+        {{ $posts->links() }}
+    </div>
 </div>

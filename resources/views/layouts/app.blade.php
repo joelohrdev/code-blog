@@ -10,6 +10,7 @@
     <link rel="icon" type="image/x-icon" href="images/favicon.png">
 
     <!-- Scripts -->
+    <script src="//unpkg.com/alpinejs" defer></script>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     @livewireStyles
 </head>
