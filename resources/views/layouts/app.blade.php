@@ -9,18 +9,15 @@
 
     <link rel="icon" type="image/x-icon" href="images/favicon.png">
 
-    <!-- Fonts -->
-    <link rel="stylesheet" href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap">
-    <link rel="stylesheet" href="https://use.typekit.net/kvd7ktn.css">
-
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
-
-    <!-- Styles -->
-    <style>[x-cloak] { display: none !important; }</style>
     @livewireStyles
 </head>
 <body class="font-sans antialiased h-full">
+    <x-header />
+    <div class="w-screen h-1 bg-gray-200 space-x-8">
+
+    </div>
     <main class="max-w-3xl mx-auto my-10">
         @yield('content')
     </main>

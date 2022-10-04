@@ -6,10 +6,11 @@
         >
             <h2 class="font-medium text-gray-800">{{ $post->title }}</h2>
             <div class="flex flex-col md:flex-row md:items-center md:space-x-2 text-sm text-gray-500">
-                {{ \Carbon\Carbon::parse($post->created_at)->format('F d, Y') }}
+                {{ \Carbon\Carbon::parse($post->published_at)->format('F d, Y') }}
             </div>
         </a>
     @empty
         <p>There are no posts to show.</p>
     @endforelse
+    {{ $posts->links() }}
 </div>

@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('title');
             $table->string('slug');
             $table->text('body');
+            $table->date('published_at')->nullable();
             $table->boolean('published')->default(0);
             $table->timestamps();
         });

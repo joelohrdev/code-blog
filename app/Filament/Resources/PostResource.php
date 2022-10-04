@@ -10,6 +10,7 @@ use Filament\Forms;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
+use Filament\Forms\Components\DatePicker;
 use Filament\Tables;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
@@ -34,7 +35,8 @@ class PostResource extends Resource
                         $set('slug', Str::slug($state));
                     }),
                 TextInput::make('slug'),
-                MarkdownEditor::make('body'),
+                MarkdownEditor::make('body')->columnSpan('full'),
+                DatePicker::make('published_at'),
                 Toggle::make('published'),
             ]);
     }
@@ -44,7 +46,7 @@ class PostResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('title'),
-                Tables\Columns\TextColumn::make('created_at')->date(),
+                Tables\Columns\TextColumn::make('published_at')->date(),
                 Tables\Columns\BooleanColumn::make('published'),
             ])
             ->filters([

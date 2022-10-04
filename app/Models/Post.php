@@ -11,10 +11,11 @@ class Post extends Model
     use HasFactory;
 
     protected $fillable = [
-        'title', 'body', 'slug', 'published'
+        'title', 'body', 'slug', 'published', 'published_at'
     ];
 
     protected $casts = [
+        'published_at' => 'date',
         'published' => 'boolean',
     ];
 }
