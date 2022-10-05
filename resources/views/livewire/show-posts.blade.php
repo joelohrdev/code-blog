@@ -5,8 +5,15 @@
             href="{{ route('post.show', $post) }}"
         >
             <h2 class="font-medium text-gray-800">{{ $post->title }}</h2>
-            <div class="flex flex-col md:flex-row md:items-center md:space-x-2 text-sm text-gray-500">
+            <div class="flex flex-col justify-between md:flex-row md:items-center md:space-x-2 text-sm text-gray-500">
                 {{ \Carbon\Carbon::parse($post->published_at)->format('F d, Y') }}
+                <div>
+                    @foreach($post->tags as $tag)
+                        <span class="inline-flex items-center rounded-full bg-gray-100 px-2.5 py-0.5 text-xs font-medium text-gray-800">
+                            {{ $tag->name }}
+                        </span>
+                    @endforeach
+                </div>
             </div>
         </a>
     @empty

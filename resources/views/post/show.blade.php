@@ -13,5 +13,12 @@
                 {{ $post->body }}
             </x-markdown>
         </div>
+        <div>
+            @foreach($post->tags as $tag)
+                <a href="{{ $tag->slug }}" class="inline-flex items-center rounded-full bg-gray-100 px-2.5 py-0.5 text-xs font-medium text-gray-800">
+                    {{ $tag->name }}
+                </a>
+            @endforeach
+        </div>
     </div>
 @endsection

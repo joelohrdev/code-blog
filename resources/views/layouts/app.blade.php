@@ -7,7 +7,7 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💀</text></svg>">
 
     <!-- Scripts -->
     <script src="//unpkg.com/alpinejs" defer></script>
@@ -19,7 +19,7 @@
     <div class="w-screen h-1 bg-gray-200 space-x-8">
 
     </div>
-    <main class="max-w-3xl mx-auto my-10">
+    <main class="max-w-3xl mx-auto my-10 px-10 md:px-0">
         @yield('content')
     </main>
 @livewireScripts
